@@ -11,7 +11,7 @@ function PlayIcons() {
             name="play-sharp"
             size={30}
             color="black"
-            style={{alignItems: 'center', left: 50}}
+            style={{alignItems: 'center'}}
           />
           <Text style={styles.playwords}>Play</Text>
         </View>
@@ -22,7 +22,7 @@ function PlayIcons() {
             name="shuffle"
             size={30}
             color="white"
-            style={{alignItems: 'center', left: 50}}
+            style={{alignItems: 'center'}}
           />
           <Text style={styles.shufflewords}>Shuffle</Text>
         </View>
@@ -32,37 +32,44 @@ function PlayIcons() {
 }
 const styles = StyleSheet.create({
   container: {
+    //backgroundColor: 'blue',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    alignItems: 'center',
+    //alignItems: 'center',
   },
   playIcon: {
     alignItems: 'center',
+    justifyContent: 'center',
     flexDirection: 'row',
-    width: 180,
+    width: 165,
     height: 50,
-    backgroundColor: 'white',
+    backgroundColor: 'rgb(255,255,255)',
     borderRadius: 15,
   },
   shuffleIcon: {
     alignItems: 'center',
+    justifyContent: 'center',
     flexDirection: 'row',
-    backgroundColor: 'grey',
-    width: 180,
+    backgroundColor: 'rgb(56,56,61)',
+    width: 165,
     height: 50,
     borderRadius: 15,
   },
+  //styling for the word Shuffle
   shufflewords: {
+    margin: 5,
     fontFamily: 'AvenirLTPro',
     color: 'white',
     fontSize: 18,
-    left: 50,
+    //left: 50,
     fontWeight: 'bold',
   },
+  //styling for the word Play
   playwords: {
+    margin: 5,
     fontFamily: 'AvenirLTPro',
     color: 'black',
-    left: 50,
+    //left: 50,
     fontSize: 18,
     fontWeight: 'bold',
   },

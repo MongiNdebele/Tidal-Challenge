@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet, SafeAreaView} from 'react-native';
+import {View, StyleSheet, SafeAreaView} from 'react-native';
 import TrackList from './src/components/Tracklist';
 import CurrentlyPlaying from './src/components/currentlyPlaying';
 import ImageBackgroundExample from './src/components/AlbumIntro';
@@ -37,24 +37,28 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'black',
   },
+  //styling for add, credits , download and share icons
   funiconz: {
     backgroundColor: 'black',
-    padding: 20,
+    padding: 10,
   },
   intro: {
     flex: 0.6,
     backgroundColor: 'coral',
   },
+  //styling for play and shuffle icon
   iconz: {
-    padding: 10,
+    flex: 0.1,
+    padding: 5,
     backgroundColor: 'black',
   },
   currentplay: {
     top: 25,
   },
   tracklis: {
-    flex: 0.2,
-    paddingBottom: 10,
+    flex: 0.25,
+    //padding: 10,
+    backgroundColor: 'black',
   },
   currentlyPlaying: {
     paddingTop: 25,
@@ -64,7 +68,7 @@ const styles = StyleSheet.create({
   fakenav: {
     backgroundColor: 'black',
     top: 45,
-  }
+  },
 });
 
 export default App;
