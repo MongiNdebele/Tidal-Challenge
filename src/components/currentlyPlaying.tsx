@@ -63,11 +63,11 @@ function CurrentlyPlaying() {
 const styles = StyleSheet.create({
   realcontainer: {
     height: 3,
-    backgroundColor: '#707070',
+    backgroundColor: 'rgb(75,75,81)',
   },
   container: {
     flexDirection: 'row',
-    backgroundColor: '#303030',
+    backgroundColor: 'rgb(27,27,28)',
     justifyContent: 'center',
     alignItems: 'flex-start',
   },
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   artisttitle: {
     marginBottom: 4,
     fontFamily: 'AvenirLTProRoman',
-    color: '#C0C0C0',
+    color: 'rgb(173,173,187)',
     textAlign: 'left',
     fontSize: 20,
   },
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingLeft: 20,
     right: 60,
-    backgroundColor: '#303030',
+    backgroundColor: 'rgb(27,27,28)',
     width: 70,
     height: 55,
   },
