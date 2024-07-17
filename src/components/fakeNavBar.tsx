@@ -28,6 +28,8 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
+    alignItems: 'center',
+    paddingTop: 8,
   },
   add: {
     fontFamily: 'AvenirLTProRoman',
@@ -37,19 +39,16 @@ const styles = StyleSheet.create({
   share: {
     fontFamily: 'AvenirLTProRoman',
     color: 'white',
-    right: 1,
     fontWeight: 'bold',
   },
   download: {
     fontFamily: 'AvenirLTProRoman',
     color: 'white',
-    right: 13,
     fontWeight: 'bold',
   },
   credits: {
     fontFamily: 'AvenirLTProRoman',
     color: 'white',
-    right: 8,
     fontWeight: 'bold',
   },
 });

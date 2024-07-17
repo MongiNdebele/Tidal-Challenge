@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, SafeAreaView} from 'react-native';
+import {View, StyleSheet, SafeAreaView, Text} from 'react-native';
 import TrackList from './src/components/Tracklist';
 import CurrentlyPlaying from './src/components/currentlyPlaying';
 import ImageBackgroundExample from './src/components/AlbumIntro';
@@ -35,39 +35,33 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     flex: 1,
-    backgroundColor: 'black',
-  },
-  //styling for add, credits , download and share icons
-  funiconz: {
-    backgroundColor: 'black',
-    padding: 10,
+    backgroundColor: 'rgb(15,15,15)',
   },
   intro: {
-    flex: 0.6,
+    flex: 0.55,
     backgroundColor: 'coral',
   },
   //styling for play and shuffle icon
   iconz: {
     flex: 0.1,
     padding: 5,
-    backgroundColor: 'black',
+    backgroundColor: 'rgb(15,15,15)',
   },
-  currentplay: {
-    top: 25,
+  //styling for add, credits , download and share icons
+  funiconz: {
+    backgroundColor: 'rgb(15,15,15)',
+    padding: 10,
   },
   tracklis: {
-    flex: 0.25,
-    //padding: 10,
-    backgroundColor: 'black',
+    flex: 0.26,
+    backgroundColor: 'rgb(15,15,15)',
   },
-  currentlyPlaying: {
-    paddingTop: 25,
-    top: 25,
-    flex: 0.2,
+  currentplay: {
+    flex: 0.12,
   },
   fakenav: {
-    backgroundColor: 'black',
-    top: 45,
+    backgroundColor: 'rgb(15,15,15)',
+    flex: 0.1,
   },
 });
 

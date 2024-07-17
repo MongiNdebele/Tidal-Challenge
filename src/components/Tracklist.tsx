@@ -59,7 +59,7 @@ function TrackList() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'rgb(15,15,15)',
     flexDirection: 'row',
     //justifyContent: 'center',
     //alignContent: 'center',
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     padding: 10,
     //height: 200,
     //right: 170,
-    backgroundColor: 'black',
+    backgroundColor: 'rgb(15,15,15)',
   },
   ///Name of the song
   nametitle: {
@@ -89,14 +89,14 @@ const styles = StyleSheet.create({
     color: '#C0C0C0',
     textAlign: 'left',
     fontSize: 20,
-    backgroundColor: 'black',
+    backgroundColor: 'rgb(15,15,15)',
   },
   idview: {
     flex: 0.1,
     //width: 35,
     //height: 70,
     marginBottom: 4,
-    backgroundColor: 'black',
+    backgroundColor: 'rgb(15,15,15)',
     alignItems: 'center',
     justifyContent: 'center',
   },

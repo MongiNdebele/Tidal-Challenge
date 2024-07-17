@@ -18,7 +18,7 @@ function Functionalicons() {
         <Text style={styles.download}>Download</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.iconcontainer}>
-        <Icon name="upload" size={30} color="white" />
+        <Icon name="share" size={30} color="white" />
         <Text style={styles.share}>Share</Text>
       </TouchableOpacity>
     </View>
