@@ -127,21 +127,25 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingTop: 10,
   },
+  // words Album by High Klassified styling
   albumtitle: {
+    padding: 10,
     fontFamily: 'AvenirLTProRoman',
     color: '#C0C0C0',
     textAlign: 'left',
     fontSize: 20,
     fontWeight: 'bold',
   },
+  //Kanvaz text styling
   text: {
     fontFamily: 'AvenirLTPro',
     fontSize: 32,
     fontWeight: 'bold',
     color: 'white',
+    paddingTop: 10,
   },
   //styling for the background picture
   picture: {
-    height: 450,
+    height: 420,
   },
 });

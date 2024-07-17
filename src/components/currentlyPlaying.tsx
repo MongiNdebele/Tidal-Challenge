@@ -1,56 +1,95 @@
 import React from 'react';
-import {
-  Image,
-  View,
-  StyleSheet,
-  SafeAreaView,
-  FlatList,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import {Image, View, StyleSheet, SafeAreaView, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 
-const DATA = [
-  {
-    id: '1',
-    title: 'Intro (Robert Glasper x KAYTANADA)',
-    artist: 'Robert Glasper Experiment',
-  },
-];
 function Imgg() {
   return (
     <Image
-      style={styles.imgg}
+      style={styles.picture}
       source={require('/Users/mongiwandebele/Desktop/Projects/AwesomeProject/assets/images/robertglasperkaytranada.jpg')}
     />
   );
 }
-
 function CurrentlyPlaying() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <Imgg />
+      <View style={styles.textportion}>
+        <Text style={styles.songname}>Intro (Robert Glasper x KAYTRANADA)</Text>
+        <Text style={styles.artistnames}>Robert Glasper Experiment</Text>
+      </View>
+      <View style={styles.iconContainer}>
+        <Icon name="controller-play" size={30} color="white" />
+        <Icon name="controller-next" size={30} color="white" />
+      </View>
+    </SafeAreaView>
+    /*       <View style={styles.greybar}>
+        <Text style={{color: '#707070'}}>.</Text>
+      </View>
+    </SafeAreaView> */
+  );
+}
+
+const styles = StyleSheet.create({
+  picture: {
+    resizeMode: 'cover',
+    width: 70,
+    height: 70,
+  },
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: 'rgb(27,27,28)',
+    width: '100%',
+    borderBottomWidth: 3,
+    borderBottomColor: 'rgb(75,75,81)',
+  },
+  textportion: {
+    flex: 0.85,
+    backgroundColor: 'rgb(27,27,28)',
+    position: 'absolute',
+    left: 75,
+  },
+  songname: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+  artistnames: {
+    color: 'rgb(173,173,187)',
+    fontSize: 16,
+  },
+  iconContainer: {
+    flexDirection: 'row',
+    backgroundColor: 'rgb(27,27,28)',
+    padding: 17,
+    gap: 25,
+    alignSelf: 'center',
+    justifyContent: 'space-between',
+  },
+  /*   greybar: {
+    height: 3,
+    backgroundColor: 'rgb(75,75,81)',
+  }, */
+});
+
+export default CurrentlyPlaying;
+
+/* function CurrentlyPlaying() {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <View style={styles.container}>
-          <Imgg />
-          <FlatList
-            style={{marginHorizontal: 10, left: 28}}
-            data={DATA}
-            renderItem={({item}) => (
-              <View>
-                <Text style={styles.nametitle}>{item.title}</Text>
-                <Text style={styles.artisttitle}>{item.artist}</Text>
-              </View>
-            )}
-            keyExtractor={item => item.id}
-          />
+        <Imgg />
+        <View style={styles.textthing}>
+          <Text style={styles.songname}>
+            Intro (Robert Glasper x KAYTANADA)
+          </Text>
+          <Text style={styles.artistnames}>Robert Glasper Experiment</Text>
         </View>
         <View style={styles.icons}>
-          <TouchableOpacity>
-            <Icon name="controller-play" size={30} color="white" />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Icon name="controller-next" size={30} color="white" />
-          </TouchableOpacity>
+          <Icon name="controller-play" size={30} color="white" />
+          <Icon name="controller-next" size={30} color="white" />
         </View>
       </View>
       <View style={styles.realcontainer}>
@@ -58,48 +97,54 @@ function CurrentlyPlaying() {
       </View>
     </SafeAreaView>
   );
-}
+} */
 
-const styles = StyleSheet.create({
-  realcontainer: {
-    height: 3,
-    backgroundColor: 'rgb(75,75,81)',
+/* const styles = StyleSheet.create({
+  picture: {
+    // resizeMode: 'contain',
+    width: 65,
+    height: 65,
   },
   container: {
+    width: '100%',
     flexDirection: 'row',
-    backgroundColor: 'rgb(27,27,28)',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
+    backgroundColor: 'green',
+    // backgroundColor: 'rgb(27,27,28)',
+    //justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'nowrap',
+    //flexBasis: 1,
+    // flexShrink: 1,
   },
-  imgg: {
-    resizeMode: 'contain',
-    width: 55,
-    height: 55,
-    left: 28,
+  textthing: {
+    backgroundColor: 'pink',
+    justifyContent: 'flex-start',
+    // marginHorizontal: 10,
   },
-  artisttitle: {
+  songname: {
+    fontFamily: 'AvenirLTProLight',
+    fontWeight: 'bold',
+    color: 'white',
+    textAlign: 'left',
+    fontSize: 18,
+  },
+  artistnames: {
+    overflow: 'hidden',
     marginBottom: 4,
     fontFamily: 'AvenirLTProRoman',
     color: 'rgb(173,173,187)',
     textAlign: 'left',
-    fontSize: 20,
-  },
-  nametitle: {
-    fontFamily: 'AvenirLTProRoman',
-    fontWeight: 'bold',
-    color: 'white',
-    textAlign: 'left',
-    fontSize: 20,
+    fontSize: 18,
   },
   icons: {
     flexDirection: 'row',
-    paddingTop: 10,
-    paddingLeft: 20,
-    right: 60,
-    backgroundColor: 'rgb(27,27,28)',
-    width: 70,
-    height: 55,
+    padding: 20,
+    // paddingLeft: 20,
+    // backgroundColor: 'rgb(27,27,28)',
+    backgroundColor: 'blue',
   },
-});
-
-export default CurrentlyPlaying;
+  realcontainer: {
+    height: 3,
+    backgroundColor: 'rgb(75,75,81)',
+  },
+}); */
