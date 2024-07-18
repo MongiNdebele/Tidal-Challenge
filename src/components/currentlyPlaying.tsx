@@ -42,8 +42,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'rgb(27,27,28)',
     width: '100%',
-    borderBottomWidth: 3,
-    borderBottomColor: 'rgb(75,75,81)',
   },
   textportion: {
     flex: 0.85,

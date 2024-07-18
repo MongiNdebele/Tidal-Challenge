@@ -51,6 +51,7 @@ function TrackList() {
             </View>
           )}
           keyExtractor={item => item.id}
+          scrollEnabled={false}
         />
       </SafeAreaView>
     </>

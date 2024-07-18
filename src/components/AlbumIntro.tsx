@@ -3,6 +3,7 @@ import {
   Image,
   ImageBackground,
   SafeAreaView,
+  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -146,6 +147,6 @@ const styles = StyleSheet.create({
   },
   //styling for the background picture
   picture: {
-    height: 420,
+    height: '100%',
   },
 });

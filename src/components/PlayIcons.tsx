@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     //backgroundColor: 'blue',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
+    paddingVertical: 15,
     //alignItems: 'center',
   },
   playIcon: {

@@ -1,68 +1,64 @@
-import React from 'react';
-import {View, StyleSheet, SafeAreaView, Text} from 'react-native';
-import TrackList from './src/components/Tracklist';
-import CurrentlyPlaying from './src/components/currentlyPlaying';
-import ImageBackgroundExample from './src/components/AlbumIntro';
-import Functionalicons from './src/components/Functionalicons';
-import PlayIcons from './src/components/PlayIcons';
-import Fakenavbar from './src/components/fakeNavBar';
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Home from './src/components/HomeScreen';
+import Icon from 'react-native-vector-icons/Feather';
 
-function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.intro}>
-        <ImageBackgroundExample />
-      </View>
-      <View style={styles.iconz}>
-        <PlayIcons />
-      </View>
-      <View style={styles.funiconz}>
-        <Functionalicons />
-      </View>
-      <View style={styles.tracklis}>
-        <TrackList />
-      </View>
-      <View style={styles.currentplay}>
-        <CurrentlyPlaying />
-      </View>
-      <View style={styles.fakenav}>
-        <Fakenavbar />
-      </View>
-    </SafeAreaView>
-  );
-}
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'column',
-    flex: 1,
-    backgroundColor: 'rgb(15,15,15)',
-  },
-  intro: {
-    flex: 0.55,
-    backgroundColor: 'coral',
-  },
-  //styling for play and shuffle icon
-  iconz: {
-    flex: 0.1,
-    padding: 5,
-    backgroundColor: 'rgb(15,15,15)',
-  },
-  //styling for add, credits , download and share icons
-  funiconz: {
-    backgroundColor: 'rgb(15,15,15)',
-    padding: 10,
-  },
-  tracklis: {
-    flex: 0.26,
-    backgroundColor: 'rgb(15,15,15)',
-  },
-  currentplay: {
-    flex: 0.12,
-  },
-  fakenav: {
-    backgroundColor: 'rgb(15,15,15)',
-    flex: 0.1,
+const screenOptions = ({route}) => ({
+  headerShown: false,
+  tabBarActiveTintColor: 'aqua',
+  tabBarInactiveTintColor: 'rgb(154,154,168)',
+  tabBarStyle: [
+    {
+      display: 'flex',
+      backgroundColor: 'rgb(0,0,0)',
+      borderTopWidth: 3,
+      borderTopColor: 'rgb(75,75,81)',
+      flex: 0.085,
+    },
+    null,
+  ],
+  tabBarShowLabel: false,
+  tabBarIcon: ({focused, color, size}) => {
+    let iconName;
+
+    if (route.name === 'Home') {
+      iconName = focused ? 'home' : 'home';
+    } else if (route.name === 'Playlists') {
+      iconName = focused ? 'youtube' : 'youtube';
+    } else if (route.name === 'Search') {
+      iconName = focused ? 'search' : 'search';
+    } else if (route.name === 'Library') {
+      iconName = focused ? 'bar-chart-2' : 'bar-chart-2';
+    } else if (route.name === 'Profile') {
+      iconName = focused ? 'user' : 'user';
+    }
+
+    // Return custom icon component
+    return <Icon name={iconName} size={size} color={color} />;
   },
 });
 
+const Tab = createBottomTabNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator screenOptions={screenOptions}>
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Playlists" component={Home} />
+        <Tab.Screen name="Search" component={Home} />
+        <Tab.Screen name="Library" component={Home} />
+        <Tab.Screen name="Profile" component={Home} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
+
 export default App;
+
+/* tabBarOptions={{
+  activeTintColor: 'aqua',
+  inactiveTintColor: 'rgb(154,154,168)',
+}} */
