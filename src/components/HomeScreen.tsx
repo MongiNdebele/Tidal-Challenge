@@ -22,10 +22,10 @@ function Home() {
         <View style={styles.tracklis}>
           <TrackList />
         </View>
-        <View style={styles.currentplay}>
-          <CurrentlyPlaying />
-        </View>
       </ScrollView>
+      <SafeAreaView style={styles.currentplay}>
+        <CurrentlyPlaying />
+      </SafeAreaView>
     </SafeAreaView>
   );
 }
@@ -48,14 +48,17 @@ const styles = StyleSheet.create({
   //styling for add, credits , download and share icons
   funiconz: {
     backgroundColor: 'rgb(15,15,15)',
-    padding: 10,
+    paddingVertical: 10,
   },
   tracklis: {
     flex: 0.27,
     backgroundColor: 'rgb(15,15,15)',
+    paddingVertical: 15,
   },
   currentplay: {
     flex: 0.2,
+    position: 'absolute',
+    bottom: 0,
   },
 });
 

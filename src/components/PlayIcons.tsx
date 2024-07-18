@@ -1,10 +1,16 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  SafeAreaView,
+} from 'react-native';
 
 function PlayIcons() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <TouchableOpacity>
         <View style={styles.playIcon}>
           <Icon
@@ -27,14 +33,14 @@ function PlayIcons() {
           <Text style={styles.shufflewords}>Shuffle</Text>
         </View>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
 const styles = StyleSheet.create({
   container: {
     //backgroundColor: 'blue',
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     paddingVertical: 15,
     //alignItems: 'center',
   },
@@ -42,8 +48,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    width: 165,
-    height: 50,
+    width: '85%',
+    height: 55,
     backgroundColor: 'rgb(255,255,255)',
     borderRadius: 15,
   },
@@ -52,8 +58,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     backgroundColor: 'rgb(56,56,61)',
-    width: 165,
-    height: 50,
+    width: '85%',
+    height: 55,
     borderRadius: 15,
   },
   //styling for the word Shuffle
@@ -62,7 +68,6 @@ const styles = StyleSheet.create({
     fontFamily: 'AvenirLTPro',
     color: 'white',
     fontSize: 18,
-    //left: 50,
     fontWeight: 'bold',
   },
   //styling for the word Play
@@ -70,7 +75,6 @@ const styles = StyleSheet.create({
     margin: 5,
     fontFamily: 'AvenirLTPro',
     color: 'black',
-    //left: 50,
     fontSize: 18,
     fontWeight: 'bold',
   },

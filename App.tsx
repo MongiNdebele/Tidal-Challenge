@@ -20,7 +20,8 @@ const screenOptions = ({route}) => ({
     null,
   ],
   tabBarShowLabel: false,
-  tabBarIcon: ({focused, color, size}) => {
+  tabBarIcon: ({focused, color}) => {
+    let size = 32;
     let iconName;
 
     if (route.name === 'Home') {
